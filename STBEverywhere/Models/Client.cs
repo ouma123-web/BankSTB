@@ -15,5 +15,5 @@ public partial class Client
 
     public virtual ICollection<Carte> Cartes { get; set; } = new List<Carte>();
 
-    public virtual ICollection<Compte> Comptes { get; set; } = new List<Compte>();
+    public virtual IEnumerable<Compte> Comptes { get; set; } = new List<Compte>();
 }

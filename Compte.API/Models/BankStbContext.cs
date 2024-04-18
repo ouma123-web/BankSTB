@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using STBEverywhere.Models;
 
 namespace Compte.API.Models;
 
@@ -16,7 +17,7 @@ public partial class BankStbContext : DbContext
     }
 
    
-    public virtual DbSet<Compte> Comptes { get; set; }
+    public virtual DbSet<STBEverywhere.Models.Compte> Comptes { get; set; }
 
     public virtual DbSet<CompteCheque> CompteCheques { get; set; }
 
@@ -35,7 +36,7 @@ public partial class BankStbContext : DbContext
     {
 
 
-        modelBuilder.Entity<Compte>(entity =>
+        modelBuilder.Entity<STBEverywhere.Models.Compte>(entity =>
         {
             entity.HasKey(e => e.CompteId).HasName("PK__Compte__DFFC42A828E2D7A5");
 
